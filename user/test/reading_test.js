@@ -30,7 +30,7 @@ describe('Reading users out of database', () => {
   it('finds user using _id', (done) => {
     User.find({ firstName: 'John' })
       .then((users) => {
-        console.log(users[0]._id);
+        console.log(`Found user[0]; ${users[0]._id}`);
         assert(users[0]._id.toString() === doe._id.toString());
         done();
       })
@@ -41,3 +41,4 @@ describe('Reading users out of database', () => {
      // })
   })
 })
+
