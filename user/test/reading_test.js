@@ -39,6 +39,15 @@ describe('Reading users out of database', () => {
      // 	console.log(err)
      // 	done()
      // })
+
+  it('find user with specific id', (done) => {
+    User.findOne({_id: joe._id})
+      .then((user) => {
+        assert(user.name === 'Joe')
+        done();
+      })
+      .catch(done)
+  })
   })
 })
 
