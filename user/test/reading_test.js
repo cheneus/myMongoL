@@ -12,7 +12,6 @@ describe('Reading users out of database', () => {
     });
     doe.save()
       .then(() => done())
-    // .catch(err => console.log(err))
   });
 
   // it('finds all users with the last name of doe', (done) => {
@@ -34,7 +33,6 @@ describe('Reading users out of database', () => {
         assert(users[0]._id.toString() === doe._id.toString());
         done();
       })
-     .catch(done)
      // .catch((err) => {
      // 	console.log(err)
      // 	done()
@@ -46,7 +44,6 @@ describe('Reading users out of database', () => {
         assert(user.name === 'Joe')
         done();
       })
-      .catch(done)
   })
   })
 })
